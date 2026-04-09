@@ -292,15 +292,19 @@ align-items: flex-start;
     display: flex;
     flex-direction: column;
     gap: 30px;
+   
   }
 
   .bildbereich img {
     width: 100%;
+    
   }
 
   .bild-spacer {
-    height: 120px;
+    height: 130px;
   }
+
+
 }
 
 
@@ -322,7 +326,7 @@ align-items: flex-start;
   }
 
   button {
-    width: 100%;
+    width: 10%;
   }
 
 }
