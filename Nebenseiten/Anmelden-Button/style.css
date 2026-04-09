@@ -1,42 +1,35 @@
+/* Grundlayout */
 body {
     background-color: #09131c;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
     margin: 0;
-
+    font-family: Arial, sans-serif;
 }
 
+/* Login Box */
 .login-box {
-    border-radius: 10px;
-    text-align: center;
+    width: 90%;
+    max-width: 30rem;
     background-color: #131f29;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 24rem;
-    width: 30rem;
-    border-style: solid;
-    border-color: rgb(70, 73, 80);
-    border-width: 0.1px;
-
-}
-
-
-.div1 {
     border-radius: 10px;
-    text-align: center;
-    background-color: #131f29;
-    height: 24rem;
-    width: 30rem;
     border: 1px solid rgb(70, 73, 80);
-    padding: 20px;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
-    
+    gap: 15px;
+    text-align: center;
 }
 
+/* Überschrift */
+.schrift1 {
+    color: rgba(237, 248, 255, .94);
+    margin-bottom: 10px;
+}
+
+/* Inputs & Button */
 input,
 button {
     height: 50px;
@@ -44,54 +37,54 @@ button {
     padding: 12px;
     box-sizing: border-box;
     border-radius: 10px;
-
+    font-size: 16px;
 }
 
-.schrift1 {
-    color: rgba(237, 248, 255, .94);
-    text-align: center;
+/* Input Styling */
+.input,
+.password {
+    background-color: #072136;
+    color: white;
+    border: 1px solid #175586;
 }
 
+/* Fokus Effekt */
+.input:focus,
+.password:focus {
+    border: 2px solid #009bef;
+    outline: none;
+    box-shadow: 0 0 5px rgba(239, 115, 0, 0.6);
+    transition: 0.3s;
+}
+
+/* Button */
 .schrift2 {
     background-color: #4b74d3;
-
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
+.schrift2:hover {
+    background-color: #3a5fb0;
+}
+
+/* Text unten */
 .satz {
-    font-size: 18px;
+    font-size: 16px;
     color: rgba(237, 248, 255, .94);
 }
 
-.sp-anmName {
-    color: #0974D6;
-    text-decoration: underline;
-    cursor: pointer;
-
-}
-
+/* Links */
+.sp-anmName,
 .sp-pass {
     color: #0974D6;
     text-decoration: underline;
     cursor: pointer;
 }
 
-.input {
-    background-color: #072136;
-    color: white;
-    border-color: #175586;
-    border-style: solid;
-    border-width: 1px;
-}
-
-.password {
-    background-color: #072136;
-    color: white;
-    border-color: #175586;
-    border-style: solid;
-    border-width: 1px;
-
-}
-
+/* Bottom Bar */
 .bottom-bar {
     position: fixed;
     bottom: 0;
@@ -101,15 +94,21 @@ button {
     background-color: #132D40;
 }
 
-.input-box {
-    position: relative;
-    width: 100%;
-}
-.input:focus,
-.password:focus {
-   border-width: 2px;
-    transition: 0.5s;
-    border-color: #009bef;
-    outline: none;
-    box-shadow: 0 0 5px rgba(239, 115, 0, 0.6);  /* sanfter orange Glow */
+/* 📱 Responsive */
+@media (max-width: 480px) {
+    .login-box {
+        width: 95%;
+        padding: 1.5rem;
+        border-radius: 0;
+    }
+
+    input,
+    button {
+        height: 45px;
+        font-size: 14px;
+    }
+
+    .satz {
+        font-size: 14px;
+    }
 }
